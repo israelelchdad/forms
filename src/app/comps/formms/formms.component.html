@@ -1,0 +1,47 @@
+<p>formms works!</p>
+
+<form>
+name:<input [formControl]='name'>
+phon:<input [formControl]='phone'>
+<button type="button" (click)='sendtotable()'>sendtotable</button>
+</form>
+
+<table border="1">
+    <tr>
+    <th>name</th>
+    <th>phone></th>
+    </tr>
+
+    <tr *ngFor='let p of puple'>
+
+        <td>{{p.name}}</td>
+        <td>{{p.phone}}</td>
+    </tr>
+</table>
+<hr><hr><hr>
+
+<div>
+        shep:<input [formControl]='shep'><br>
+        <span>shep:{{shep.value}}</span><br>
+        <button type="button" (click)='sendshep()'>sendshep</button>
+
+
+
+</div>
+<hr><hr><hr>
+
+
+<form [formGroup]='forms' (ngSubmit)='send()'>
+
+    name<input formControlName='name'><br>
+    pone<input formControlName='phone'><br>
+     wotsup<input type="checkbox"  formControlName='wotsup'><br>
+     <button>send</button>
+
+
+</form> 
+
+
+
+<app-tableforms></app-tableforms> 
+
